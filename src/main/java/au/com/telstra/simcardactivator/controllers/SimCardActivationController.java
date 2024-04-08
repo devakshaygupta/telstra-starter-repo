@@ -1,4 +1,4 @@
-package au.com.telstra.simcardactivator;
+package au.com.telstra.simcardactivator.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -8,6 +8,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import au.com.telstra.simcardactivator.models.SimCard;
+import au.com.telstra.simcardactivator.repositories.SimCardRepository;
 
 @RestController
 @RequestMapping("/api/activateSimCard")

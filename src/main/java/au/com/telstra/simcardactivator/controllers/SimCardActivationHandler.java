@@ -1,4 +1,4 @@
-package au.com.telstra.simcardactivator;
+package au.com.telstra.simcardactivator.controllers;
 
 import java.util.Optional;
 
@@ -13,6 +13,10 @@ import org.springframework.web.client.RestTemplate;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+
+import au.com.telstra.simcardactivator.models.ActivationResponseResult;
+import au.com.telstra.simcardactivator.models.SimCard;
+import au.com.telstra.simcardactivator.repositories.SimCardRepository;
 
 public class SimCardActivationHandler {
 

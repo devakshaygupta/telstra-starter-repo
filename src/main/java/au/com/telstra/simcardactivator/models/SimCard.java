@@ -1,4 +1,4 @@
-package au.com.telstra.simcardactivator;
+package au.com.telstra.simcardactivator.models;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -15,7 +15,7 @@ public class SimCard {
     private String customerEmail;
     private boolean active;
 
-    protected SimCard() {
+    public SimCard() {
     }
 
     public SimCard(String iccid, String customerEmail) {
