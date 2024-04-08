@@ -1,19 +1,35 @@
 package au.com.telstra.simcardactivator;
 
-import org.springframework.data.annotation.Id;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonProperty.Access;
-
+@Entity
 public class SimCard {
+
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
     private String iccid;
-    @JsonProperty(access = Access.READ_ONLY)
-    private String customerEmail;   
+    private String customerEmail;
+    private boolean active;
+
+    protected SimCard() {}
 
     public SimCard(String iccid, String customerEmail) {
         this.iccid = iccid;
         this.customerEmail = customerEmail;
+    }
+
+    public SimCard(String iccid, String customerEmail, boolean active) {
+        this.iccid = iccid;
+        this.customerEmail = customerEmail;
+        this.active = active;
+    }
+
+    public Long getId() {
+        return id;
     }
 
     // Getter and setter methods for 'iccid'
@@ -32,5 +48,14 @@ public class SimCard {
 
     public void setCustomerEmail(String customerEmail) {
         this.customerEmail = customerEmail;
+    }
+
+    // Getter and setter methods for 'customerEmail'
+    public boolean getActive() {
+        return active;
+    }
+
+    public void setActive(boolean active) {
+        this.active = active;
     }
 }

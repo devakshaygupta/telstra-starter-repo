@@ -1,17 +1,13 @@
 {
     "name": "Java",
     // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-    "image": "mcr.microsoft.com/devcontainers/java:11",
+    "image": "mcr.microsoft.com/devcontainers/java:17",
     "features": {
       "ghcr.io/devcontainers/features/java:1": {
-        "version": "11",
+        "version": "17",
         "installMaven": "true"
       }
     },
-    // Use 'forwardPorts' to make a list of ports inside the container available locally.
-    "forwardPorts": [
-      5432
-    ],
     // Use 'postCreateCommand' to run commands after the container is created.
     "postCreateCommand": "java -version && git --version",
     // Configure tool-specific properties.
