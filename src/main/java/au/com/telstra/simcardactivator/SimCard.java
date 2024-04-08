@@ -15,7 +15,8 @@ public class SimCard {
     private String customerEmail;
     private boolean active;
 
-    protected SimCard() {}
+    protected SimCard() {
+    }
 
     public SimCard(String iccid, String customerEmail) {
         this.iccid = iccid;
